@@ -17,6 +17,7 @@ class AddRoleToUsersTable extends Migration
             $table->integer('role')->default(1);
             $table->integer('status')->default(1);
             $table->integer('is_active')->default(1);
+            $table->integer('user_key')->nullable();
         });
     }
 
@@ -31,6 +32,7 @@ class AddRoleToUsersTable extends Migration
             $table->dropColumn('role');
             $table->dropColumn('status');
             $table->dropColumn('is_active');
+            $table->dropColumn('user_key');
         });
     }
 }

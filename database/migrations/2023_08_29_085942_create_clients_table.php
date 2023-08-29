@@ -22,6 +22,7 @@ class CreateClientsTable extends Migration
             $table->text('notes')->nullable();
             $table->integer('status')->default(1);
             $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->timestamps();
         });
     }
